@@ -1,0 +1,23 @@
+{
+    "name": "visualsignal/laravel-address-store",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Dave Blencowe",
+            "email": "dblencowe@visualsignal.io"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "VisualSignal\\AddressStore\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "VisualSignal\\FormPartials\\FormPartialsServiceProvider"
+            ]
+        }
+    }
+}
