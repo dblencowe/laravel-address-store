@@ -7,7 +7,9 @@
             "email": "dblencowe@visualsignal.io"
         }
     ],
-    "require": {},
+    "require": {
+        "visualsignal/laravel-has-uuid": "dev-master"
+    },
     "autoload": {
         "psr-4": {
             "VisualSignal\\AddressStore\\": "src/"
