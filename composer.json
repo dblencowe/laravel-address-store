@@ -18,7 +18,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VisualSignal\\FormPartials\\FormPartialsServiceProvider"
+                "VisualSignal\\AddressStore\\AddressStoreServiceProvider"
             ]
         }
     }

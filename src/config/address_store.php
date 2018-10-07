@@ -2,6 +2,7 @@
 
 return [
     'use_uuids' => true,
+    'table_name' => 'addresses',
     'format' => [
         'label',
         'street_number',

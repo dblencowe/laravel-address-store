@@ -14,7 +14,7 @@ class CreateAddressStoreTable extends Migration
     public function up()
     {
         $config = config('address_store');
-        Schema::create('clients', function (Blueprint $table) use($config) {
+        Schema::create($config['table_name'], function (Blueprint $table) use($config) {
             if ($config['use_uuids']) {
                 $table->uuid('id');
                 $table->primary('id');
