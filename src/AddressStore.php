@@ -49,7 +49,7 @@ class AddressStore extends Model
         ];
     }
 
-    public function __toString($format = null, $separator = PHP_EOL)
+    public function toString($format = null, $separator = PHP_EOL)
     {
         if (! $format) {
             $format = config('address_store.format');
