@@ -24,6 +24,7 @@ class AddressStore extends Model
 
     public function __construct()
     {
+        parent::__construct();
         $config = config('address_store');
         if ($config['use_uuids'] && ! $this instanceof UUIDAddressStore) {
             throw new \RuntimeException('UUIDs enabled. Please use ' . UUIDAddressStore::class);
