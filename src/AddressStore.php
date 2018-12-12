@@ -28,6 +28,8 @@ class AddressStore extends Model
         if ($config['use_uuids'] && ! $this instanceof UUIDAddressStore) {
             throw new \RuntimeException('UUIDs enabled. Please use ' . UUIDAddressStore::class);
         }
+
+        $this->table = $config['table_name'];
     }
     
     public static function rules()
