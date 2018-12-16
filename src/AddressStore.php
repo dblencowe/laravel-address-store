@@ -22,15 +22,14 @@ class AddressStore extends Model
         'country_code',
     ];
 
-    public function __construct()
+    public function __construct(array $attributes = [])
     {
-        parent::__construct();
-        $config = config('address_store');
+	$config = config('address_store');
+	$this->table = $config['table_name'];
+        parent::__construct($attributes);
         if ($config['use_uuids'] && ! $this instanceof UUIDAddressStore) {
             throw new \RuntimeException('UUIDs enabled. Please use ' . UUIDAddressStore::class);
         }
-
-        $this->table = $config['table_name'];
     }
     
     public static function rules()
